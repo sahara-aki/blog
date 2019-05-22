@@ -1,0 +1,59 @@
+.fix-global {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 40px -8px rgba(0, 0, 0, 0.5);
+}
+.global-header {
+  width: 100%;
+  height: 58.5px;
+  transition:all 500ms ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #dedede;
+  font: 0.8rem 'Ubuntu', sans-serif;
+  &:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 40px -8px rgba(0, 0, 0, 0.5);
+  }
+  .header-catalogue {
+    padding: 0  15px;
+    height: 58.5px;
+    line-height: 58.5px;
+  }
+  .catalogue-item {
+    margin: 0 20px;
+    display: block;
+    height: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+    &:after {
+      display: block;
+      content:"";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffA500;
+      transition: all 300ms ease;
+    }
+    &:hover { 
+      &:after {
+        width: 100%;
+      }
+      a {
+        color: #ffA500;
+        transition: all 1s;
+      }
+    }
+    .iconfont {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "extends": "airbnb",
+  "rules": {
+    "semi": ["error", "never"],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": [],
+      "specialLink": [],
+      "aspects": ["noHref", "invalidHref", "preferButton"]
+    }],
+  "import/no-unresolved": "off",
+  "import/extensions": "off",
+  "import/no-extraneous-dependencies": "off"
+  }
+}

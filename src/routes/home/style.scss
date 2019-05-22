@@ -1,0 +1,119 @@
+.home-background {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/miao.jpg) no-repeat fixed center; 
+  background-size: cover;
+  position: relative;
+  &::after {
+      content: '';
+      background:url(data:image/gif;base64,R0lGODlhAgACAIABAAAAAP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjJDQjM0NzIzRUU4MTFFNzkyMzhGQjE2OTBBM0I3MDIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjJDQjM0NzMzRUU4MTFFNzkyMzhGQjE2OTBBM0I3MDIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMkNCMzQ3MDNFRTgxMUU3OTIzOEZCMTY5MEEzQjcwMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMkNCMzQ3MTNFRTgxMUU3OTIzOEZCMTY5MEEzQjcwMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAEALAAAAAACAAIAAAICRF4AOw==) 0 0 fixed;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100vh;
+      will-change: transform;
+      z-index: 2;
+  }
+  h1 {
+    font-size:60px;
+    color: #fff;
+    text-align: center;
+  }
+}
+.latest-article {
+  width: 720px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  line-height: 32px;
+  margin:72px auto 38px;
+  border-bottom: 1px dashed #efefef;
+  .iconfont {
+    font-size: 22px;
+    color: rgb(246, 194, 68);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+.main-content {
+  width: 720px;
+  margin: 0 auto;
+  .article-item {
+    width: 100%;
+    height: 270px;
+    box-shadow: 0 1px 20px -8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 36px;
+    overflow: hidden;
+    .article-pic {
+      width: 396px;
+      height: 100%;
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+    .article-content {
+      width: 324px;
+      height: 100%;
+      padding: 18px 32px;
+      color: #888;
+      .article-time {
+        font-size: 12px;
+        .iconshijian {
+          margin-right: 10px;
+          font-size: 14px;
+        }
+      }
+      .article-title {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 18px 0;
+        color: #504e4e;
+        white-space: nowrap;
+        font-weight: 600;
+      }
+      .article-tag {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 12px;
+        color: #888;
+        line-height: 14px;
+        height: 14px;
+        .tag-item {
+          line-height: 14px;
+          b {
+            vertical-align: middle;
+          }
+          .iconfont {
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+        }
+      }
+      .article-context {
+        color: rgba(0, 0, 0, 0.66);
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        margin-top: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        /* autoprefixer: off */
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
