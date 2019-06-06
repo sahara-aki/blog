@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/miao.jpg) no-repeat fixed center; 
+  //background: url(/miao.jpg) no-repeat fixed center; 
   background-size: cover;
   position: relative;
   &::after {
@@ -22,6 +22,31 @@
     font-size:60px;
     color: #fff;
     text-align: center;
+    position: relative;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 2px;
+      text-shadow: -1px 0 inherit;
+      top: 0;
+      color: inherit;
+      background: inherit;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim 2s infinite linear alternate-reverse;
+    }
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: 1px 0 inherit;
+      top: 0;
+      color: inherit;
+      background: inherit;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
   }
 }
 .latest-article {

@@ -7,6 +7,7 @@ import stores from 'stores'
 
 import Home from 'routes/home'
 import About from 'routes/about'
+import Test from 'routes/test'
 
 const Routes = () => (
   <HashRouter>
@@ -15,6 +16,7 @@ const Routes = () => (
       <Switch>
         <Route path="/home" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/test" component={Test} />
       </Switch>
     </div>
   </HashRouter>

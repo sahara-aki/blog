@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import GlobalHeader from '../../components/GlobalHeader'
-
+import 'styles/motto.scss'
 import './style.scss'
 
 class Home extends Component {
@@ -30,7 +30,7 @@ class Home extends Component {
       <div>
         <GlobalHeader />
         <div className="home-background">
-          <h1>hi,sahara_aki</h1>
+          <h1 data-text="sahara_aki"></h1>
         </div>
         <div className="latest-article">
           <i className="iconfont iconnew"></i> 
