@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import GlobalHeader from '../../components/GlobalHeader'
+import GlobalHeader from 'components/GlobalHeader'
+import BackTop from 'components/BackTop'
 import 'styles/motto.scss'
 import './style.scss'
 
@@ -29,14 +30,17 @@ class Home extends Component {
     return (
       <div>
         <GlobalHeader />
+        <BackTop />
         <div className="home-background">
-          <h1 data-text="sahara_aki"></h1>
+          <h1 data-text="sahara_aki">
+            sahara_aki
+          </h1>
         </div>
         <div className="latest-article">
           <i className="iconfont iconnew"></i> 
           <span>Lastest Article</span>
         </div>
-        <ul className="main-content">
+        <ul className="main-content" ref="main_background">
           {this.state.list.map((item,index)=>{
             return <li className="article-item" key={index}>
               <div className={`article-pic ${index%2===1?"left":"right"}`}>
