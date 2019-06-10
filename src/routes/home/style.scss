@@ -15,7 +15,6 @@
       bottom: 0;
       left: 0;
       height: 100vh;
-      will-change: transform;
       z-index: 1;
   }
   h1 {
@@ -146,6 +145,15 @@
         -webkit-box-orient: vertical;
       }
     }
+  }
+}
+
+@keyframes backOpcity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import GlobalHeader from 'components/GlobalHeader'
 import BackTop from 'components/BackTop'
+import Bubble from 'components/Bubble'
 import 'styles/motto.scss'
 import './style.scss'
 
@@ -36,6 +37,7 @@ class Home extends Component {
             sahara_aki
           </h1>
         </div>
+        <Bubble />
         <div className="latest-article">
           <i className="iconfont iconnew"></i> 
           <span>Lastest Article</span>

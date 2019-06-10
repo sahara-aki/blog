@@ -8,8 +8,11 @@ class GlobalHeader extends Component {
     showHeader:false
   }
   componentDidMount(){
-    window.addEventListener("scroll",()=>{
-      let scrollTop = this.refs.header.parentNode.parentNode.parentNode.scrollTop;
+    window.addEventListener("scroll",this.scroll,true)
+  }
+
+  scroll = ()=>{
+    let scrollTop = this.refs.header.parentNode.parentNode.parentNode.scrollTop;
       if(scrollTop >0){
         this.setState({
           showHeader:true
@@ -18,14 +21,23 @@ class GlobalHeader extends Component {
         this.setState({
           showHeader:false
         })
-      }
-    },true)
+    }
   }
+
+  componentWillUnmount(){
+    window.removeEventListener("scroll",this.scroll,true)
+  }
+
   render() {
     const {showHeader} = this.state;
     return (
       <div className={`global-header ${showHeader?'fix-global':""}`} ref="header">
-        <div className="blog-icon">水曜日的博客</div>
+        <div className="blog-icon">
+          <div className="avatar-box">
+            <img className={`avatar ${showHeader?"fix-avatar":""}`}  src="/image/avatar.jpeg" alt=""/>
+          </div>
+          <span className="blog-title">sahara_aki的博客</span>
+        </div>
         <ul className="header-catalogue">
           <li className="catalogue-item"><Link to="/" ><i className="iconfont iconhome"></i>Home</Link></li>
           <li className="catalogue-item"><Link to="/blog" ><i className="iconfont iconsvgwrite"></i>Blog</Link></li>
