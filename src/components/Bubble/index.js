@@ -109,7 +109,7 @@ class Bubble extends Component {
 }
 
 Bubble.defaultProps = {
-  color: 'rgba(255, 255, 255, .5)',
+  color: 'rgba(255,255,255,.5)',
   radius: 16,
   density: 0.3,
   clearOffset: 0.6,

@@ -36,8 +36,10 @@ class Home extends Component {
           <h1 data-text="sahara_aki">
             sahara_aki
           </h1>
+          <div className="bubble">
+            <Bubble />
+          </div>
         </div>
-        <Bubble />
         <div className="latest-article">
           <i className="iconfont iconnew"></i> 
           <span>Lastest Article</span>
