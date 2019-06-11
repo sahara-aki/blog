@@ -2,6 +2,7 @@
   "name": "sahara_aki_blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sahara-aki.github.io/blog/",
   "dependencies": {
     "antd": "^3.6.4",
     "autoprefixer": "7.1.6",
@@ -63,7 +64,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -115,5 +118,8 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
