@@ -29,7 +29,7 @@ class GlobalHeader extends Component {
   }
 
   handleBackTop = ()=>{
-    let el = this.refs.backTop.parentNode.parentNode.parentNode;
+    let el = this.refs.backTop.parentNode.parentNode;
     this.timer = setInterval(()=>{
       let scrollTop = el.scrollTop;
       if(scrollTop<=0){
