@@ -15,7 +15,7 @@ class GlobalHeader extends Component {
   }
 
   scroll = ()=>{
-    let scrollTop = this.refs.backTop.parentNode.parentNode.parentNode.scrollTop;
+    let scrollTop = this.refs.backTop.parentNode.parentNode.scrollTop;
     if(scrollTop >700){
       this.refs.backTop.style.top = "-200px";
     } else {

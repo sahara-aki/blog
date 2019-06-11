@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import { Route, Redirect } from 'react-router'
 import { HashRouter, Switch } from 'react-router-dom'
 import { Provider } from 'mobx-react'
+import GlobalHeader from 'components/GlobalHeader'
+import BackTop from 'components/BackTop'
 
 import stores from 'stores'
 
@@ -12,6 +14,8 @@ import Test from 'routes/test'
 const Routes = () => (
   <HashRouter>
     <div>
+      <GlobalHeader />
+      <BackTop />
       <Route exact path="/" render={() => <Redirect to="/home" />} />
       <Switch>
         <Route path="/home" component={Home} />

@@ -12,7 +12,7 @@ class GlobalHeader extends Component {
   }
 
   scroll = ()=>{
-    let scrollTop = this.refs.header.parentNode.parentNode.parentNode.scrollTop;
+    let scrollTop = this.refs.header.parentNode.parentNode.scrollTop;
       if(scrollTop >0){
         this.setState({
           showHeader:true
