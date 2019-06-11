@@ -3,7 +3,7 @@ import './index.scss'
 
 class GlobalHeader extends Component {
   state = {
-    show:false
+
   }
 
   componentWillMount(){
@@ -11,19 +11,21 @@ class GlobalHeader extends Component {
   }
 
   componentDidMount(){
-    window.addEventListener("scroll",()=>{
-      let scrollTop = this.refs.backTop.parentNode.parentNode.parentNode.scrollTop;
-      if(scrollTop >700){
-        console.log(this.refs.backTop.style)
-        this.refs.backTop.style.top = "-200px";
-      } else {
-        this.refs.backTop.style.top = "-900px"  
-      }
-    },true)
+    window.addEventListener("scroll",this.scroll,true)
+  }
+
+  scroll = ()=>{
+    let scrollTop = this.refs.backTop.parentNode.parentNode.parentNode.scrollTop;
+    if(scrollTop >700){
+      this.refs.backTop.style.top = "-200px";
+    } else {
+      this.refs.backTop.style.top = "-900px"  
+    }
   }
 
   componentWillUnmount(){
     clearInterval(this.timer)
+    window.removeEventListener("scroll",this.scroll,true)
   }
 
   handleBackTop = ()=>{
@@ -41,7 +43,6 @@ class GlobalHeader extends Component {
   }
 
   render() {
-    console.log(this.state.show)
     return (
       <div className="backTop" ref="backTop" onClick={this.handleBackTop}>
 
