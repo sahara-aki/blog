@@ -8,10 +8,11 @@ class Blog extends Component {
   }
   render() {
     return (
-      <div>
-        <GlobalHeader />
-        <BackTop />
-        
+      <div className="blog">
+        <div className="content">
+          <div className="articel"></div>
+          <div className="extra"></div>
+        </div>
       </div>
     )
   }

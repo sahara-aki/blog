@@ -1,0 +1,15 @@
+.blog {
+  .content {
+    width: 1240px;
+    margin: 0 auto;
+    overflow: hidden;
+    .article {
+      width: 800px;
+      float: left;
+    }
+    .extra {
+      width: 400;
+      float:right;
+    }
+  }
+}
