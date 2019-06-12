@@ -10,8 +10,8 @@ class Blog extends Component {
     return (
       <div className="blog">
         <div className="content">
-          <div className="articel"></div>
-          <div className="extra"></div>
+          <div className="articel">1</div>
+          <div className="extra">1</div>
         </div>
       </div>
     )
