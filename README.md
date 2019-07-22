@@ -3,21 +3,8 @@
 
 #### 如何启动
 * start
-```
+
 npm start
-```
- or
-```
-yarn start
-```
-* build
-```
-npm run build
-```
- or
-```
-yarn build
-```
 
 #### 项目框架
 
@@ -25,4 +12,4 @@ yarn build
 
 #### 项目后台
 
-待陈集武启动开发
+Koa + mongoDB
