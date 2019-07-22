@@ -34,7 +34,7 @@ class GlobalHeader extends Component {
       <div className={`global-header ${showHeader?'fix-global':""}`} ref="header">
         <div className="blog-icon">
           <div className="avatar-box">
-            <img className={`avatar ${showHeader?"fix-avatar":""}`}  src="http://i1.fuimg.com/690255/9bd8953e2e6329fa.jpg" alt=""/>
+            <img className={`avatar ${showHeader?"fix-avatar":""}`}  src="./image/avatar.jpeg" alt=""/>
           </div>
           <span className="blog-title">sahara_aki的博客</span>
         </div>

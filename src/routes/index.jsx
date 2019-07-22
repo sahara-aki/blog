@@ -9,6 +9,7 @@ import stores from 'stores'
 
 import Home from 'routes/home'
 import About from 'routes/about'
+import Blog from 'routes/blog'
 import Test from 'routes/test'
 
 const Routes = () => (
@@ -19,6 +20,7 @@ const Routes = () => (
       <Route exact path="/" render={() => <Redirect to="/home" />} />
       <Switch>
         <Route path="/home" component={Home} />
+        <Route path="/blog" component={Blog} />
         <Route path="/about" component={About} />
         <Route path="/test" component={Test} />
       </Switch>

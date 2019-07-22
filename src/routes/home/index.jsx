@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import GlobalHeader from 'components/GlobalHeader'
-import BackTop from 'components/BackTop'
 import Bubble from 'components/Bubble'
 import 'styles/motto.scss'
 import './style.scss'

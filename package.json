@@ -45,6 +45,8 @@
     "postcss-loader": "2.0.8",
     "promise": "8.0.1",
     "raf": "3.4.0",
+    "rc-texty": "^0.2.0",
+    "rc-tween-one": "^2.4.1",
     "react": "^16.4.1",
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.1",
