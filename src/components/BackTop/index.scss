@@ -1,0 +1,28 @@
+.backTop {
+  background: url('http://i1.fuimg.com/690255/765779aa0d422643.png') no-repeat 0  0 ;
+  width: 70px;
+  height: 900px;
+  position: fixed;
+  top:-900px;
+  right: 25px;
+  transition: 600ms all cubic-bezier(.25, .1, .3, 1.5);
+  transform: transLateY(-1000px);
+  animation: back 2s linear infinite;
+  outline: none;
+  z-index: 5;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes back {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
