@@ -10,7 +10,7 @@ import stores from 'stores'
 import Home from 'routes/home'
 import About from 'routes/about'
 import Blog from 'routes/blog'
-import Test from 'routes/test'
+import Article from 'routes/article'
 
 const Routes = () => (
   <HashRouter>
@@ -22,7 +22,7 @@ const Routes = () => (
         <Route path="/home" component={Home} />
         <Route path="/blog" component={Blog} />
         <Route path="/about" component={About} />
-        <Route path="/test" component={Test} />
+        <Route path="/article/:id" component={Article} />
       </Switch>
     </div>
   </HashRouter>
