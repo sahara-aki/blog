@@ -1,5 +1,0 @@
-# dependencies
-*.js
-!src/**/*.js
-
-src/*.js
