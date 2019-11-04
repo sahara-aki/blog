@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("http://i1.fuimg.com/690255/d1040bed4eefe4f1.jpg") no-repeat fixed center; 
+  background: url(../../../public/miao.jpg) no-repeat fixed center; 
   background-size: cover;
   position: relative;
   &::after {
@@ -34,6 +34,10 @@
     transition: all 400ms ease;
     text-align: center;
     z-index: 2;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
     &::before,&::after {
       content: attr(data-text);
       position: absolute;
@@ -156,7 +160,7 @@
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 5;
-        /* autoprefixer: off */
+        /*! autoprefixer: ignore next */
         -webkit-box-orient: vertical;
       }
     }

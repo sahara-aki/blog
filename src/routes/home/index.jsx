@@ -44,7 +44,7 @@ class Home extends Component {
           {this.state.list.map((item,index)=>{
             return <li className="article-item" key={index}>
               <div className={`article-pic ${index%2===1?"left":"right"}`}>
-                <img src="http://i1.fuimg.com/690255/d1040bed4eefe4f1.jpg" alt=""/>
+                <img src="/miao.jpg" alt=""/>
               </div>
               <div className={`article-content ${index%2===1?"right":"left"}`}>
                 <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released 2019-04-21 14:16:56</div>
@@ -54,7 +54,7 @@ class Home extends Component {
                   <span className="tag-item"><i className="iconfont icondianzan"></i><b>12</b></span>
                   <span className="tag-item"><i className="iconfont iconbiaoqian"></i><b>12</b></span>
                 </div>
-                <p className="article-context">
+                <p className="article-context" style={{"WebkitBoxOrient": "vertical"}}>
                 {item.content}
                 </p>
               </div>
