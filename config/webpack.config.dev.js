@@ -164,7 +164,7 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'), // translates CSS into CommonJS
                 options: {
-                  sourceMap: true,
+                  sourceMap: false,
                   importLoaders: 3,
                 },
               },
