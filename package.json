@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
+  },
   "dependencies": {
-    "antd": "^3.6.4",
+    "antd": "3.6.4",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "8.2.3",
@@ -67,13 +75,6 @@
     "whatwg-fetch": "2.0.3",
     "xlsx": "^0.15.1"
   },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
@@ -126,6 +127,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "webpack-bundle-analyzer": "^3.6.0"
   }
 }

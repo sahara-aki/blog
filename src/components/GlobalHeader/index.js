@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Icon } from 'antd'
 import './index.scss'
 
 class GlobalHeader extends Component {
