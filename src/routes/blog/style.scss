@@ -3,7 +3,7 @@
     width: 100%;
     height: 440px;
     margin: 0 auto;
-    background:skyblue url(https://public.fuyoukache.com/fbfe0a93-6381-47ab-95d8-cd9225801880---banner1.jpg) no-repeat;
+    background:skyblue url(../../../public/image/blog-bg.jpg) no-repeat;
     background-size: cover;
     background-position: left center;
   }
@@ -128,6 +128,7 @@
       .top10 {
         .top10-list {
           .top10-item {
+            display:block;
             width: 100%;
             height: 74px;
             border-radius: 8px;

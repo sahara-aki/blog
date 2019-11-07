@@ -10,9 +10,6 @@ export default class Css extends Component {
 
   componentDidMount(){
     this.initHana();
-    setTimeout(()=>{
-      this.clearCanvas();
-    },10000)
   }
 
 

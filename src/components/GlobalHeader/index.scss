@@ -43,6 +43,8 @@
       }
       .fix-avatar {
         display: block;
+        transition:all 500ms ease;
+        opacity: 1;
       }
     }
     .blog-title {

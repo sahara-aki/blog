@@ -57,7 +57,7 @@ class Blog extends Component {
             {this.state.list.map((item,index)=>{
               return <li className="article-item" key={index}>
                 <div className={`article-pic ${index%2===1?"left":"right"}`}>
-                  <img src="miao.jpg" alt=""/>
+                  <img src="/image/miao.jpg" alt=""/>
                 </div>
                 <div className={`article-content ${index%2===1?"right":"left"}`}>
                   <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released 2019-04-21 14:16:56</div>
@@ -84,7 +84,7 @@ class Blog extends Component {
               </div>
               <ul className="top10-list">
                 {this.state.topList.map((item,index)=>{
-                  return <li className="top10-item" key={index}>
+                  return <a className="top10-item" key={index} href={item.href} target="_blank">
                     <div className="background-blur" style={{background:`url(${item.img})`}}></div>
                     <div className="item-content">
                       <div className="top-content">
@@ -95,7 +95,7 @@ class Blog extends Component {
                         <img src={item.img} alt=""/>
                       </div>
                     </div>
-                  </li>
+                  </a>
                 })}
               </ul>
             </div>
