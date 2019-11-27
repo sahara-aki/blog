@@ -61,9 +61,6 @@ module.exports = {
     },
     plugins: [
     ],
-    externals: {
-      
-    },
   },
   module: {
     strictExportPresence: true,
