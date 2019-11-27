@@ -8,19 +8,19 @@ class Home extends Component {
   state = {
     list:[
       {
-        id:2,
-        title:"静止的世界",
-        content:"你眼中看似落叶纷飞变化无常的世界，实际只是躺在上帝怀中一份早已谱好的乐章。"
-      },
-      {
         id:1,
         title:"浅谈http缓存",
         content:"前端组的同事一起弄了个前端组的分享计划，想着给他们讲点什么，花了一周时间整理了http缓存的知识，花了一个多小时也算帮同事们重新理了理这套东西，并且讲解了福佑加油的白屏现象是如何产生的，这里就当一个整理分享了。"
       },
       {
-        id:3,
+        id:2,
         title:"webpack实践之DLLPlugin 和 DLLReferencePlugin的使用",
         content:"前段时间前端组内分享了用dllPlugin来减少打包时间的方法,这里做一下整理说明,有需要的朋友可以参考下"
+      },
+      {
+        id:3,
+        title:"静止的世界",
+        content:"你眼中看似落叶纷飞变化无常的世界，实际只是躺在上帝怀中一份早已谱好的乐章。"
       },
     ]
   }
