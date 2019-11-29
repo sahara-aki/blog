@@ -13,6 +13,7 @@ import Blog from 'routes/blog'
 import Article from 'routes/article'
 import Css from 'routes/cssPage'
 import Test from 'routes/test'
+import Demo from 'routes/demo'
 
 const Routes = () => (
   <HashRouter>
@@ -27,6 +28,7 @@ const Routes = () => (
         <Route path="/css" component={Css} />
         <Route path="/article/:id" component={Article} />
         <Route path="/test" component={Test} />
+        <Route path="/demo" component={Demo} />
       </Switch>
     </div>
   </HashRouter>
