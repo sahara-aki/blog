@@ -14,6 +14,8 @@ import Article from 'routes/article'
 import Css from 'routes/cssPage'
 import Test from 'routes/test'
 import Demo from 'routes/demo'
+import Select from 'routes/select'
+import Editor from 'routes/editor'
 
 const Routes = () => (
   <HashRouter>
@@ -29,6 +31,8 @@ const Routes = () => (
         <Route path="/article/:id" component={Article} />
         <Route path="/test" component={Test} />
         <Route path="/demo" component={Demo} />
+        <Route path="/select" component={Select} />
+        <Route path="/editor" component={Editor} />
       </Switch>
     </div>
   </HashRouter>

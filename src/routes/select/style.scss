@@ -1,0 +1,12 @@
+.select-container {
+  width: 200px;
+  margin: 100px 60px;
+  .anticon-close-circle {
+    &::before {
+      content:"";
+    }
+  }
+  .button-group {
+    margin-top: 20px; 
+  }
+}
