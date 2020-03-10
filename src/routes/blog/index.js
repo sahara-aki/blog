@@ -1,32 +1,11 @@
 import React, { Component } from 'react'
-import BlogTitle from '../../components/BlogTitle'
 import 'styles/motto.scss'
 import './style.scss'
+import moment from 'moment'
 
 class Blog extends Component {
   state = {
-    list:[
-      {
-        id:4,
-        title:"几个CSS效果封装",
-        content:"在写css的时候, 很多样式都是很常用但是写起来很麻烦, 虽然现在有很多成熟的ui框架, 但是我们也不能一个简单的活动页也引入那么大个框架,这里用scss封装了几个常用的css效果。"
-      },
-      {
-        id:2,
-        title:"webpack实践之DLLPlugin 和 DLLReferencePlugin的使用",
-        content:"前段时间前端组内分享了用dllPlugin来减少打包时间的方法,这里做一下整理说明,有需要的朋友可以参考下"
-      },
-      {
-        id:1,
-        title:"浅谈http缓存",
-        content:"前端组的同事一起弄了个前端组的分享计划，想着给他们讲点什么，花了一周时间整理了http缓存的知识，花了一个多小时也算帮同事们重新理了理这套东西，并且讲解了福佑加油的白屏现象是如何产生的，这里就当一个整理分享了。"
-      },
-      {
-        id:3,
-        title:"静止的世界",
-        content:"你眼中看似落叶纷飞变化无常的世界，实际只是躺在上帝怀中一份早已谱好的乐章。"
-      },
-    ],
+    list:[],
     topList:[
       {
         title:"21 个VSCode 快捷键，让代码更快，更有趣",
@@ -46,6 +25,18 @@ class Blog extends Component {
     ],
     tags:["CSS3","JavaScript","手写轮播图","HTML5","Flex Layout","Poem","Webpack","React","Git","运维","Vue","Life","Django","手撸淘宝购物车","React Hooks","git","GitHub面板","blur白边问题","回到顶部","微信小程序","Taro","天气APP","JS基础","Node.js","nvm","Node版本管理","ES5","JavaScript API 全解析","Travis CI","持续集成","持续部署","Vuepress","Gitalk","This","面试","前端","Animation","动画","Music","作用域(链)","闭包","词法作用域","原型/原型链","面向对象编程","继承","Promise","手写 Promise","Event Loop","HTTP","X Japan","WeAreX"]
   }
+
+  componentDidMount(){
+    fetch('/json/article.json')
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({
+          list:data.reverse()
+        })
+      })
+  }
+
+
   render() {
     return (
       <div className="blog">
@@ -57,17 +48,17 @@ class Blog extends Component {
             {this.state.list.map((item,index)=>{
               return <li className="article-item" key={index}>
                 <div className={`article-pic ${index%2===1?"left":"right"}`}>
-                  <img src="/image/miao.jpg" alt=""/>
+                  <img src={item.imgUrl} alt=""/>
                 </div>
                 <div className={`article-content ${index%2===1?"right":"left"}`}>
-                  <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released 2019-04-21 14:16:56</div>
+                  <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released {moment(item.createTime*1).format("YYYY-MM-DD HH:mm")}</div>
                   <div className={`article-title ${index%2===1?"text-right":"text-left"}`} onClick={()=>{
                     this.props.history.push('/article/'+item.id)
                   }}>{item.title}</div>
                   <div className="article-tag">
-                    <span className="tag-item"><i className="iconfont iconchakan"></i><b>12</b></span>
-                    <span className="tag-item"><i className="iconfont icondianzan"></i><b>12</b></span>
-                    <span className="tag-item"><i className="iconfont iconbiaoqian"></i><b>12</b></span>
+                    <span className="tag-item"><i className="iconfont iconchakan"></i><b>{item.lookover}</b></span>
+                    <span className="tag-item"><i className="iconfont icondianzan"></i><b>{item.like}</b></span>
+                    <span className="tag-item"><i className="iconfont iconbiaoqian"></i><b>{item.collection}</b></span>
                   </div>
                   <p className="article-context" style={{"WebkitBoxOrient": "vertical"}}>
                   {item.content}

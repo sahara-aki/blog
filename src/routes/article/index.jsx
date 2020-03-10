@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
 import ReactMarkdown from 'react-markdown';
-import codeBlock from './CodeBlock';
 import 'github-markdown-css';
 import './index.scss'
 
@@ -30,9 +29,6 @@ export default class Article extends Component {
           className="markdown-body"
           source={markdown}
           escapeHtml={false}
-          renderers={{
-            code: codeBlock,
-          }}
         />
       </div>
     </div>

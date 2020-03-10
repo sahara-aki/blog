@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Editor from 'fy-editor'
-import { Button } from 'antd'
+import { Button, Input } from 'antd'
 import './style.scss'
 
 export default class Fyeditor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      token:"9c7cob-LRsfL-oZPy6U2z6AvEESaVRBjtUP2gDJd:NshZb7pHrZPbgcnDLTY_Hz5-vH0=:eyJzY29wZSI6InB1YmxpYyIsImRlYWRsaW5lIjoxNTc2MjU0NjI4fQ=="
+      token:"9c7cob-LRsfL-oZPy6U2z6AvEESaVRBjtUP2gDJd:VVT6er09x7WBK-MyeUYBbCAd7bo=:eyJzY29wZSI6InB1YmxpYyIsImRlYWRsaW5lIjoxNTc2NTA0OTIyfQ=="
     }
   }
 
@@ -23,6 +23,13 @@ export default class Fyeditor extends Component {
     this.initContent("<div>试试设置内容</div>")
   }
 
+  changeToken = (e)=>{
+    const val = e.target.value;
+    this.setState({
+      token:val
+    })
+  }
+
   render(){
     const { token } = this.state;
     return(
@@ -36,7 +43,8 @@ export default class Fyeditor extends Component {
         />
         <div className="button-group">
           <Button onClick={this.getContent} type="primary">获取内容</Button>
-          <Button onClick={this.setContent} style={{marginLeft:20}} type="primary">设置内容</Button>
+          <Button onClick={this.setContent} style={{margin:20}} type="primary">设置内容</Button>
+          <Input placeholder="请输入七牛token" onChange={this.changeToken} style={{width:300}}/>
         </div>
       </div>
     )

@@ -3,32 +3,23 @@ import { Link } from 'react-router-dom'
 import Bubble from 'components/Bubble'
 import 'styles/motto.scss'
 import './style.scss'
+import moment from 'moment'
 
 class Home extends Component {
   state = {
-    list:[
-      {
-        id:4,
-        title:"几个CSS效果封装",
-        content:"在写css的时候, 很多样式都是很常用但是写起来很麻烦, 虽然现在有很多成熟的ui框架, 但是我们也不能一个简单的活动页也引入那么大个框架,这里用scss封装了几个常用的css效果。"
-      },
-      {
-        id:2,
-        title:"webpack实践之DLLPlugin 和 DLLReferencePlugin的使用",
-        content:"前段时间前端组内分享了用dllPlugin来减少打包时间的方法,这里做一下整理说明,有需要的朋友可以参考下"
-      },
-      {
-        id:1,
-        title:"浅谈http缓存",
-        content:"前端组的同事一起弄了个前端组的分享计划，想着给他们讲点什么，花了一周时间整理了http缓存的知识，花了一个多小时也算帮同事们重新理了理这套东西，并且讲解了福佑加油的白屏现象是如何产生的，这里就当一个整理分享了。"
-      },
-      {
-        id:3,
-        title:"静止的世界",
-        content:"你眼中看似落叶纷飞变化无常的世界，实际只是躺在上帝怀中一份早已谱好的乐章。"
-      },
-    ]
+    list:[]
   }
+
+  componentDidMount(){
+    fetch('/json/article.json')
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({
+          list:data.reverse()
+        })
+      })
+  }
+
   render() {
     return (
       <div>
@@ -48,15 +39,15 @@ class Home extends Component {
           {this.state.list.map((item,index)=>{
             return <li className="article-item" key={index}>
               <div className={`article-pic ${index%2===1?"left":"right"}`}>
-                <img src="/image/miao.jpg" alt=""/>
+                <img src={item.imgUrl} alt=""/>
               </div>
               <div className={`article-content ${index%2===1?"right":"left"}`}>
-                <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released 2019-04-21 14:16:56</div>
+          <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released {moment(item.createTime*1).format("YYYY-MM-DD HH:mm")}</div>
                 <Link to={'/article/'+item.id} className={`article-title ${index%2===1?"text-right":"text-left"}`}>{item.title}</Link>
                 <div className="article-tag">
-                  <span className="tag-item"><i className="iconfont iconchakan"></i><b>12</b></span>
-                  <span className="tag-item"><i className="iconfont icondianzan"></i><b>12</b></span>
-                  <span className="tag-item"><i className="iconfont iconbiaoqian"></i><b>12</b></span>
+                  <span className="tag-item"><i className="iconfont iconchakan"></i><b>{item.lookover}</b></span>
+                  <span className="tag-item"><i className="iconfont icondianzan"></i><b>{item.like}</b></span>
+                  <span className="tag-item"><i className="iconfont iconbiaoqian"></i><b>{item.collection}</b></span>
                 </div>
                 <p className="article-context" style={{"WebkitBoxOrient": "vertical"}}>
                 {item.content}
@@ -75,7 +66,7 @@ class Home extends Component {
             <span>by Sahara_aki</span>  
           </p>
           <div className="copy">
-            <div className="copy-info">Copyright © 2019 Sahara_aki Inc. All rights reserved.</div>
+            <div className="copy-info">Copyright © 2019 Sahara_aki Inc. <a href="http://www.beian.miit.gov.cn/">晋ICP备19013475号-1</a></div>
             <ul className="friend-link">
               <li><a>About</a></li>
               <li><a>Privacy Policy</a></li>
