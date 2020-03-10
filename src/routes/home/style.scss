@@ -231,10 +231,10 @@
 @media screen and (max-width: 600px){
   .home-background {
     margin-top: 58px;
-    min-height: 25vh;
-    max-height: 25vh;
+    min-height: 200px;
+    max-height: 200px;
     &::after {
-      height: 25vh;
+      height: 200px;
     }
     h1 {
       font-size: 60px;

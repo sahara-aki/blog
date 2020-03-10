@@ -42,7 +42,7 @@ class GlobalHeader extends Component {
           <div className="avatar-box">
             <img className={`avatar ${showHeader ? "fix-avatar" : ""}`} src="./image/avatar.jpeg" alt="" />
           </div>
-          <span className="blog-title">前端技术分享</span>
+          <span className="blog-title">墨染白泉の前端技术分享</span>
         </div>
         <ul className="header-catalogue">
           <li className="catalogue-item"><Link to="/" ><i className="iconfont iconhome"></i>Home</Link></li>
