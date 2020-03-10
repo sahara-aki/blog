@@ -84,3 +84,9 @@ html,body {
 .text-left {
   text-align: left;
 }
+
+@media screen and (max-width: 600px){
+  .markdown-body {
+    font-size: 12px !important;
+  }
+}

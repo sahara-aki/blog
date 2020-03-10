@@ -41,20 +41,20 @@ class Blog extends Component {
     return (
       <div className="blog">
         <div className="banner">
-          
+          <h1>B L O G</h1>
         </div>
         <div className="content">
           <ul className="article">
             {this.state.list.map((item,index)=>{
-              return <li className="article-item" key={index}>
+              return <li className="article-item" key={index} onClick={()=>{
+                this.props.history.push('/article/'+item.id)
+              }}>
                 <div className={`article-pic ${index%2===1?"left":"right"}`}>
                   <img src={item.imgUrl} alt=""/>
                 </div>
                 <div className={`article-content ${index%2===1?"right":"left"}`}>
                   <div className={`article-time ${index%2===1?"text-right":"text-left"}`}><i className="iconfont iconshijian"></i>Released {moment(item.createTime*1).format("YYYY-MM-DD HH:mm")}</div>
-                  <div className={`article-title ${index%2===1?"text-right":"text-left"}`} onClick={()=>{
-                    this.props.history.push('/article/'+item.id)
-                  }}>{item.title}</div>
+                  <div className={`article-title ${index%2===1?"text-right":"text-left"}`}>{item.title}</div>
                   <div className="article-tag">
                     <span className="tag-item"><i className="iconfont iconchakan"></i><b>{item.lookover}</b></span>
                     <span className="tag-item"><i className="iconfont icondianzan"></i><b>{item.like}</b></span>

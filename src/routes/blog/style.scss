@@ -6,6 +6,13 @@
     background:skyblue url(../../../public/image/k-onbg.jpg) no-repeat;
     background-size: cover;
     background-position: left center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size:80px;
+      color: #FFF;
+    }
   }
   .content {
     width: 1240px;
@@ -256,7 +263,11 @@
 @media screen and (max-width: 600px){
   .blog {
     .banner {
+      margin-top: 58px;
       height: 200px;
+      h1 {
+        font-size: 60px;
+      }
     }
     .content {
       width: 100%;
