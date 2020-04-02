@@ -1,0 +1,54 @@
+.timeLine {
+  .banner {
+    width: 100%;
+    height: 440px;
+    margin: 0 auto;
+    background:skyblue url(../../../public/image/k-onbg.jpg) no-repeat;
+    background-size: cover;
+    background-position: left center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size:80px;
+      color: #FFF;
+    }
+  }
+  .content {
+    width: 1240px;
+    margin:  54px auto 0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .timeLine {
+    .banner {
+      margin-top: 58px;
+      height: 200px;
+      h1 {
+        font-size: 60px;
+      }
+    }
+    .content {
+      width: 100%;
+      .article {
+        width: 100%;
+        padding: 0 20px;
+        .article-item {
+          height: auto;
+          .article-pic{
+            height: 270px;
+            width: 100%;
+          }
+          .article-content {
+            height:270px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .other {
+      display: none;
+    }
+  }
+}
