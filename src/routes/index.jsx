@@ -18,27 +18,27 @@ import Test from 'routes/test'
 // import Editor from 'routes/editor'
 import Calculator from './calculator'
 
-const Routes = () => (
-  <HashRouter>
-    <div>
-      <GlobalHeader />
-      <BackTop />
-      <Route exact path="/" render={() => <Redirect to="/home" />} />
-      <Switch>
-        <Route path="/home" component={Home} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/about" component={About} />
-        <Route path="/css" component={Css} />
-        <Route path="/article/:id" component={Article} />
-        <Route path="/test" component={Test} />
-        <Route path="/calculator" component={Calculator} />
-        {/* <Route path="/demo" component={Demo} />
-        <Route path="/select" component={Select} />
-        <Route path="/editor" component={Editor} /> */}
-      </Switch>
-    </div>
-  </HashRouter>
-)
+const Routes = () => {
+  return <HashRouter>
+  <div>
+    <GlobalHeader />
+    <BackTop />
+    <Route exact path="/" render={() => <Redirect to="/home" />} />
+    <Switch>
+      <Route path="/home" component={Home} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/about" component={About} />
+      <Route path="/css" component={Css} />
+      <Route path="/article/:id" component={Article} />
+      <Route path="/test" component={Test} />
+      <Route path="/calculator" component={Calculator} />
+      {/* <Route path="/demo" component={Demo} />
+      <Route path="/select" component={Select} />
+      <Route path="/editor" component={Editor} /> */}
+    </Switch>
+  </div>
+</HashRouter>
+}
 
 const App = () => (
   <Fragment>

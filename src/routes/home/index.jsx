@@ -4,7 +4,7 @@ import Bubble from 'components/Bubble'
 import 'styles/motto.scss'
 import './style.scss'
 import moment from 'moment'
-import ReactAplayer from 'react-aplayer';
+// import ReactAplayer from 'react-aplayer';
 
 class Home extends Component {
   state = {
@@ -70,7 +70,7 @@ class Home extends Component {
             </li>
           })}
         </ul>
-        <div className="show-more">
+        <div className="show-more" onClick={()=>{this.props.history.push("/blog")}}>
           More
         </div>
         <div className="copyright">
@@ -89,11 +89,11 @@ class Home extends Component {
             </ul>
           </div>
         </div>
-        <div className="music">
+        {/* <div className="music">
           <ReactAplayer
             {...props}
           ></ReactAplayer>
-        </div>
+        </div> */}
       </div>
     )
   }

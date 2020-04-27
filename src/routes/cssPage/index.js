@@ -4,7 +4,7 @@ export default class Css extends Component {
   constructor(props){
     super(props)
     this.state = {
-      
+      gray:true,
     }
   }
 
@@ -257,7 +257,7 @@ export default class Css extends Component {
       var layers = [
         {
           ctx: context1,
-          count: 1000, // 2000 个在其他浏览器上比较卡，推荐 chrome 
+          count: 100, // 2000 个在其他浏览器上比较卡，推荐 chrome 
           size: { max: 20, min: 4 },
           alpha: { max: 0.6, min: 0.2 },
           vy: { max: 4, min: 2 },
@@ -267,7 +267,7 @@ export default class Css extends Component {
         },
         {
           ctx: context2,
-          count: 200,
+          count: 50,
           size: { max: 30, min: 10 },
           alpha: { max: 0.9, min: 0.2 },
           vy: { max: 2, min: 1 },
@@ -300,6 +300,9 @@ export default class Css extends Component {
       // 6 秒后静止画面，缩放花瓣
       this.timer1 = setTimeout(() => {
         layers.forEach(layer => { layer.zoom() })
+        this.setState({
+          gray:false
+        })
       }, 6000)
 
       // 往后 1 秒花瓣方向运动
@@ -316,7 +319,9 @@ export default class Css extends Component {
 
 
   render(){
+    const { gray } = this.state;
     return <div className="css-container">
+      <img src="/bglty.jpg" alt="" className={gray?"gray":""}/>
       <canvas width="800" height="600" id="canva1"></canvas>
       <canvas width="800" height="600" id="canva2"></canvas>
       <canvas width="800" height="600" id="canva3"></canvas>
