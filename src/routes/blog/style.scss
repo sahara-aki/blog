@@ -10,13 +10,14 @@
     justify-content: center;
     align-items: center;
     h1 {
-      font-size:80px;
-      color: #FFF;
-      max-width: 500px;
-      width: 70%;
-      padding: 20px;
+      // color: #FFF;
+      width: 500px;
+      height: 160px;
+      line-height: 160px;
+      font-size: 80px;
       margin: 0 auto;
       text-align: center;
+      letter-spacing:16px;
       background:rgba(255,255,255,0.3);
       z-index: 1;
       overflow: hidden;
@@ -279,7 +280,10 @@
       margin-top: 58px;
       height: 200px;
       h1 {
-        font-size: 60px;
+        width: 300px;
+        height: 120px;
+        line-height: 120px;
+        font-size: 40px;
       }
     }
     .content {

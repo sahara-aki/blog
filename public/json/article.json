@@ -34,7 +34,7 @@
     "title":"几个CSS效果封装",
     "content":"在写css的时候, 很多样式都是很常用但是写起来很麻烦, 虽然现在有很多成熟的ui框架, 但是我们也不能一个简单的活动页也引入那么大个框架,这里用scss封装了几个常用的css效果。",
     "createTime":"1577538867000",
-    "imgUrl":"https://public.fuyoukache.com/55cc7e0a-0e83-4035-9761-a1da35910cd7---WX20200121-154244@2x.png",
+    "imgUrl":"https://public.fuyoukache.com/FiBylGZiUdHO9O0LRZBfe3zBmZBY",
     "lookover":14,
     "like":0,
     "collection":0
@@ -65,7 +65,17 @@
     "content":"antd更新了4.0之后, 发现示例都已经是用react hooks来实现的了,看来hooks是大势所趋,试着用了一下也觉得确实很舒服,随便记录一点踩坑日志",
     "createTime":"1584003770759",
     "imgUrl":"https://public.fuyoukache.com/FiqKcNe6P06LiHaTDf-2XqCyXrzG",
-    "lookover":1,
+    "lookover":3,
+    "like":0,
+    "collection":0
+  },
+  {
+    "id":8,
+    "title":"一个毛玻璃效果的实现",
+    "content":"最近在优化博客css样式的时候想要给标题添加一个毛玻璃效果,找了2种方法,效果都有缺陷,来一起看看吧.",
+    "createTime":"1587982463544",
+    "imgUrl":"https://public.fuyoukache.com/Fm2Zu0_UpgzZiU79Sc3BkYesKasY",
+    "lookover":4,
     "like":0,
     "collection":0
   }
