@@ -97,7 +97,7 @@ class Blog extends Component {
               </div>
               <div className="tag-list">
                 {this.state.tags.map((item,index)=>{
-                  return <a className="tag-item" key={index} href="javascript:void(0)">
+                  return <a className="tag-item" key={index}>
                     {item}
                   </a>
                 })}

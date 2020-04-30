@@ -8,11 +8,11 @@ class GlobalHeader extends Component {
     showToggle: false
   }
   componentDidMount() {
-    window.addEventListener("scroll", this.scroll, true)
+    window.addEventListener("scroll", this.scroll)
   }
 
   scroll = () => {
-    let scrollTop = this.refs.header.parentNode.parentNode.scrollTop;
+    let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     if (scrollTop > 0) {
       this.setState({
         showHeader: true
@@ -31,7 +31,7 @@ class GlobalHeader extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.scroll, true)
+    window.removeEventListener("scroll", this.scroll)
   }
 
   render() {

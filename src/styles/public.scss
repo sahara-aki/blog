@@ -20,6 +20,7 @@ body {
     font-size: 14px;
     font-family: 'Ubuntu', sans-serif;
     overflow: auto;
+    scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
 }
 td, th, caption {
@@ -53,9 +54,6 @@ input, textarea, select, button {
 }
 table {
     border-collapse: collapse;
-}
-html {
-    overflow-y: scroll;
 }
 html,body {
   width: 100%;

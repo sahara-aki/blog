@@ -4,7 +4,6 @@ import Bubble from 'components/Bubble'
 import 'styles/motto.scss'
 import './style.scss'
 import moment from 'moment'
-// import ReactAplayer from 'react-aplayer';
 
 class Home extends Component {
   state = {
@@ -22,19 +21,6 @@ class Home extends Component {
   }
 
   render() {
-    const props = {
-      // fixed:true,
-      autoplay:false,
-      audio: [
-        {
-          name: '光るなら',
-          artist: 'Goose house',
-          url: 'http://m10.music.126.net/20200401185025/7286ba4fc4a399f6e44fa74ae5bb3f97/ymusic/d970/cc44/1344/386c1ad4b02a6ddff04873919e6808db.mp3',
-          cover: 'http://public.fuyoukache.com/FkwXyBJfGm5vsNGxfYvVfGgxR7Vv',
-        }
-      ]
-    };
-
     return (
       <div>
         <div className="home-background">
@@ -89,11 +75,6 @@ class Home extends Component {
             </ul>
           </div>
         </div>
-        {/* <div className="music">
-          <ReactAplayer
-            {...props}
-          ></ReactAplayer>
-        </div> */}
       </div>
     )
   }

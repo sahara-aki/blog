@@ -4,6 +4,7 @@ import { HashRouter, Switch } from 'react-router-dom'
 // import { Provider } from 'mobx-react'
 import GlobalHeader from 'components/GlobalHeader'
 import BackTop from 'components/BackTop'
+import ScrollToTop from 'components/ScrollToTop'
 
 // import stores from 'stores'
 
@@ -12,10 +13,6 @@ import About from 'routes/about'
 import Blog from 'routes/blog'
 import Article from 'routes/article'
 import Css from 'routes/cssPage'
-import Test from 'routes/test'
-// import Demo from 'routes/demo'
-// import Select from 'routes/select'
-// import Editor from 'routes/editor'
 import Calculator from './calculator'
 
 const Routes = () => {
@@ -24,18 +21,16 @@ const Routes = () => {
     <GlobalHeader />
     <BackTop />
     <Route exact path="/" render={() => <Redirect to="/home" />} />
-    <Switch>
-      <Route path="/home" component={Home} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/about" component={About} />
-      <Route path="/css" component={Css} />
-      <Route path="/article/:id" component={Article} />
-      <Route path="/test" component={Test} />
-      <Route path="/calculator" component={Calculator} />
-      {/* <Route path="/demo" component={Demo} />
-      <Route path="/select" component={Select} />
-      <Route path="/editor" component={Editor} /> */}
-    </Switch>
+    <ScrollToTop>
+      <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/about" component={About} />
+          <Route path="/css" component={Css} />
+          <Route path="/article/:id" component={Article} />
+          <Route path="/calculator" component={Calculator} />
+      </Switch>
+    </ScrollToTop>
   </div>
 </HashRouter>
 }
