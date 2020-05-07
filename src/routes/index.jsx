@@ -14,6 +14,7 @@ import Blog from 'routes/blog'
 import Article from 'routes/article'
 import Css from 'routes/cssPage'
 import Calculator from './calculator'
+import hooksTest from './hooksTest'
 
 const Routes = () => {
   return <HashRouter>
@@ -29,6 +30,7 @@ const Routes = () => {
           <Route path="/css" component={Css} />
           <Route path="/article/:id" component={Article} />
           <Route path="/calculator" component={Calculator} />
+          <Route path="/hookstest" component={hooksTest} />
       </Switch>
     </ScrollToTop>
   </div>

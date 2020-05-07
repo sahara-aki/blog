@@ -15,7 +15,7 @@ class GlobalHeader extends Component {
   }
 
   scroll = ()=>{
-    let scrollTop = this.refs.backTop.parentNode.parentNode.scrollTop;
+    let scrollTop = document.scrollingElement.scrollTop;
     if(scrollTop >700){
       this.refs.backTop.style.top = "-200px";
     } else {
@@ -29,16 +29,15 @@ class GlobalHeader extends Component {
   }
 
   handleBackTop = ()=>{
-    let el = this.refs.backTop.parentNode.parentNode;
     this.timer = setInterval(()=>{
-      let scrollTop = el.scrollTop;
+      let scrollTop = document.scrollingElement.scrollTop
       if(scrollTop<=0){
         this.speed = 0;
         clearInterval(this.timer)
         return
       }
       this.speed += 6;
-      el.scrollTop = (scrollTop - this.speed)<=0?0:scrollTop - this.speed;
+      document.scrollingElement.scrollTop = (scrollTop - this.speed)<=0?0:scrollTop - this.speed;
     },10)
   }
 

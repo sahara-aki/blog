@@ -78,5 +78,15 @@
     "lookover":4,
     "like":0,
     "collection":0
+  },
+  {
+    "id":9,
+    "title":"React hooks中减少重复渲染的解决办法",
+    "content":"React 中当组件的 props 或 state 变化时，会重新渲染视图，实际开发会遇到不必要的渲染场景, 最近学习了一些hooks的api来解决这些问题.",
+    "createTime":"1588846467841",
+    "imgUrl":"https://public.fuyoukache.com/Fke8TPXKj9dWCt9_HmGU2348cGs4",
+    "lookover":1,
+    "like":0,
+    "collection":0
   }
 ]
