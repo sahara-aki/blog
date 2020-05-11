@@ -15,10 +15,11 @@ import Article from 'routes/article'
 import Css from 'routes/cssPage'
 import Calculator from './calculator'
 import hooksTest from './hooksTest'
+import ObjectFit from './demo/objectFIt'
 
 const Routes = () => {
   return <HashRouter>
-  <div>
+  <div style={{width:"100%",height:"100%"}}>
     <GlobalHeader />
     <BackTop />
     <Route exact path="/" render={() => <Redirect to="/home" />} />
@@ -31,6 +32,7 @@ const Routes = () => {
           <Route path="/article/:id" component={Article} />
           <Route path="/calculator" component={Calculator} />
           <Route path="/hookstest" component={hooksTest} />
+          <Route path="/demo/objectfit" component={ObjectFit} />
       </Switch>
     </ScrollToTop>
   </div>

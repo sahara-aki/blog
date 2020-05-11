@@ -88,5 +88,15 @@
     "lookover":1,
     "like":0,
     "collection":0
+  },
+  {
+    "id":10,
+    "title":"css属性object-fit使用问题探究",
+    "content":"我们在处理背景图片大小的时候,经常会用background-size:cover在进行最优的裁剪,那么如果是src引入的img图片 如何设置同样的效果呢?",
+    "createTime":"1589179276223",
+    "imgUrl":"https://public.fuyoukache.com/Fv1LD8yRiAmGGm_R0TU9JNrxgqnf",
+    "lookover":1,
+    "like":0,
+    "collection":0
   }
 ]
