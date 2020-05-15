@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { getArticleList } from '../../api/home'
 import Bubble from 'components/Bubble'
+import { result } from '../../utils/utils'
 import 'styles/motto.scss'
 import './style.scss'
 import moment from 'moment'
@@ -11,12 +12,19 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    fetch('/json/article.json')
-      .then((res) => res.json())
-      .then((data) => {
+    this.getArticleData();
+  }
+
+  getArticleData = async()=>{
+    const res = await getArticleList();
+    result(res)
+      .then(()=>{
         this.setState({
-          list:data.reverse()
+          list:res.data
         })
+      })
+      .catch((err)=>{
+        console.log(err)
       })
   }
 

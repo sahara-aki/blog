@@ -1,41 +1,61 @@
 import React, { Component } from 'react'
-import 'styles/motto.scss'
+import { getAllTags, getTopList } from '../../api/blog'
+import { getArticleList } from '../../api/home'
+import { result } from '../../utils/utils'
 import './style.scss'
 import moment from 'moment'
 
 class Blog extends Component {
   state = {
     list:[],
-    topList:[
-      {
-        title:"21 个VSCode 快捷键，让代码更快，更有趣",
-        href:"https://juejin.im/post/5d34fdfff265da1b897b0c8d",
-        img:"https://public.fuyoukache.com/Fm2Zu0_UpgzZiU79Sc3BkYesKasY"
-      },
-      {
-        title:"8个问题看你是否真的懂 JS",
-        href:"https://juejin.im/post/5d2d146bf265da1b9163c5c9",
-        img:"https://public.fuyoukache.com/a35e409b-7455-406a-ad0e-1feda062ffe8---EHy_cobUYAACPFY.jpeg"
-      },
-      {
-        title:"【不可思议的CSS】天气不可能那么可爱",
-        href:"https://juejin.im/post/5d2f3f3351882556c3186f57",
-        img:"https://public.fuyoukache.com/Fl_o2mkiotmzUgGGmygXKEs57pja"
-      },
-    ],
-    tags:["CSS3","JavaScript","手写轮播图","HTML5","Flex Layout","Poem","Webpack","React","Git","运维","Vue","Life","Django","手撸淘宝购物车","React Hooks","git","GitHub面板","blur白边问题","回到顶部","微信小程序","Taro","天气APP","JS基础","Node.js","nvm","Node版本管理","ES5","JavaScript API 全解析","Travis CI","持续集成","持续部署","Vuepress","Gitalk","This","面试","前端","Animation","动画","Music","作用域(链)","闭包","词法作用域","原型/原型链","面向对象编程","继承","Promise","手写 Promise","Event Loop","HTTP","X Japan","WeAreX"]
+    topList:[],
+    tags:[]
   }
 
   componentDidMount(){
-    fetch('/json/article.json')
-      .then((res) => res.json())
-      .then((data) => {
+    this.getArticleData();
+    this.getTags();
+    this.getTop();
+  }
+
+  getArticleData = async()=>{
+    const res = await getArticleList();
+    result(res)
+      .then(()=>{
         this.setState({
-          list:data.reverse()
+          list:res.data
         })
+      })
+      .catch((err)=>{
+        console.log(err)
       })
   }
 
+  getTags = async ()=>{
+    const res = await getAllTags();
+    result(res)
+      .then(()=>{
+        this.setState({
+         tags:res.data.map(item=>item.name)
+        })
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+  }
+
+  getTop = async ()=>{
+    const res = await getTopList();
+    result(res)
+      .then(()=>{
+        this.setState({
+          topList:res.data
+        })
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+  }
 
   render() {
     return (
