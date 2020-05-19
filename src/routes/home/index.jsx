@@ -32,9 +32,14 @@ class Home extends Component {
     return (
       <div>
         <div className="home-background">
-          <h1 data-text="sahara_aki">
-            sahara_aki
-          </h1>
+          <div className="name">
+            <h1 data-text="sahara_aki">
+              sahara_aki
+            </h1>
+            <div className="description">
+              明日、今日よりも好きになれる
+            </div>
+          </div>
           <div className="bubble">
             <Bubble />
           </div>

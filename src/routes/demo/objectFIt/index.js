@@ -2,13 +2,13 @@
  * @Author: shilei 
  * @Date: 2020-05-11 11:05:00 
  * @Last Modified by: shilei
- * @Last Modified time: 2020-05-11 11:24:04
+ * @Last Modified time: 2020-05-18 14:44:40
  * @Description: object-fit:cover 与 backgournd-size:cover
  */
 
 
 import React from 'react';
-import './index.less'
+import './index.scss'
 
 function Demo() {
   return (

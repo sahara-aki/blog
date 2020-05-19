@@ -17,7 +17,6 @@ export default class Article extends Component {
   }
 
   componentWillMount() {
-    // this.getBanner();
     this.getContent();
     this.getDetail();
   }
@@ -31,7 +30,6 @@ export default class Article extends Component {
 
   getDetail = async ()=>{
     const { id }= this.props.match.params;
-    console.log(id)
     const res = await getArticleDetail({
       id
     });
@@ -43,18 +41,6 @@ export default class Article extends Component {
       })
       .catch((err)=>{
         console.log(err)
-      })
-  }
-
-
-  getBanner = ()=>{
-    const { id }= this.props.match.params;
-    fetch('/json/article.json')
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({
-          bannerUrl:data.filter(item=>item.id == id)[0].imgUrl
-        })
       })
   }
 
