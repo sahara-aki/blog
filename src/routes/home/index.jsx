@@ -72,22 +72,6 @@ class Home extends Component {
         <div className="show-more" onClick={()=>{this.props.history.push("/blog")}}>
           More
         </div>
-        <div className="copyright">
-          <p className="bottom-title">
-            <span>Brought to you with</span>  
-            <i className="iconfont iconxinheart118"></i>
-            <span>by Sahara_aki</span>  
-          </p>
-          <div className="copy">
-            <div className="copy-info">Copyright © 2019 Sahara_aki Inc. <a href="http://www.beian.miit.gov.cn/">晋ICP备19013475号-1</a></div>
-            <ul className="friend-link">
-              <li><a>About</a></li>
-              <li><a>Privacy Policy</a></li>
-              <li><a>Apps</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
     )
   }

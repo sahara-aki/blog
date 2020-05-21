@@ -1,0 +1,110 @@
+.music-container {
+  .banner {
+    width: 100%;
+    height: 440px;
+    margin: 0 auto;
+    background-image: url(https://public.fuyoukache.com/FmvAuPNEseG3H2e-a_GwMfCx46Hw);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      // color: #FFF;
+      width: 500px;
+      height: 160px;
+      line-height: 160px;
+      font-size: 80px;
+      margin: 0 auto;
+      text-align: center;
+      letter-spacing:16px;
+      background:rgba(255,255,255,0.3);
+      z-index: 1;
+      overflow: hidden;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+  }
+  .albums-container {
+    margin-top: 20px;
+    padding: 0 20px;
+    .title {
+      font-size:20px;
+      font-weight: normal;
+      color: #666;
+      line-height: 30px;
+      padding: 15px 0;
+    }
+    .albums {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      .album-item {
+        height: 280px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        img {
+          min-width: 100%;
+          max-width: 100%;
+          min-height: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+        .music-info {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: rgba(245, 245, 245, 0.8);
+          cursor: pointer;
+          transform: translateY(140px);
+          transition: all 300ms ease 0s;
+          &:hover {
+            transform: translateY(0);
+          }
+          .music-name {
+            color: rgb(80, 78, 78);
+            font-weight: normal;
+            font-size: 16px;
+            margin: 26px 0 0 30px;
+          }
+          .music-author {
+            color: rgb(214, 43, 107);
+            text-align: right;
+            margin-right: 30px;
+            font-size: 14px;
+            margin: 20px 30px 0 0;
+          }
+          .music-line {
+            width: 50px;
+            height: 1px;
+            background-color: rgb(214, 43, 107);
+            margin: 30px 0 0 30px;
+          }
+          .listen-button {
+            width: 108px;
+            height: 38px;
+            text-align: center;
+            line-height: 35px;
+            border: 1px solid rgb(53, 192, 192);
+            color:rgb(53, 192, 192);
+            border-radius: 20px;
+            margin: 80px 0 0 30px;
+            background: #fff;
+            transition: all 200ms ease 0s;
+            &:hover {
+              color: rgb(255, 255, 255);
+              background: rgb(53, 192, 192);
+            }
+          }
+        }
+      }
+    }
+  }
+}

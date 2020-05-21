@@ -2,7 +2,7 @@
  * @Author: shilei 
  * @Date: 2020-05-18 14:28:36 
  * @Last Modified by: shilei
- * @Last Modified time: 2020-05-19 10:44:40
+ * @Last Modified time: 2020-05-19 16:59:52
  * @Description: 军火模拟器
  */
 
@@ -11,7 +11,7 @@ import React, { Component } from 'react'
 import { Button, Row, Col, } from 'antd'
 import './index.scss'
 
-class Home extends Component {
+class Equip extends Component {
   state = {
     equip:[],
     tujian:[],
@@ -197,4 +197,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Equip

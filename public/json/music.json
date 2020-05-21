@@ -1,0 +1,44 @@
+[
+  {
+    "name": "キセキ",
+    "artist": "GReeeeN",
+    "url": "https://music.163.com/song/media/outer/url?id=733149.mp3 ",
+    "cover":"http://p1.music.126.net/n-5ATukvGcuhYH-LHlMx5w==/824633720832073.jpg?param=130y130",
+    "img":"http://p1.music.126.net/n-5ATukvGcuhYH-LHlMx5w==/824633720832073.jpg"
+  },
+  {
+    "name": "Lemon",
+    "artist": "米津玄師",
+    "url": "http://m10.music.126.net/20200520195201/1c3cf224fd32b717157ad56c19d23310/ymusic/6eed/4ef2/d8ae/b85b958a70552f7e002e33d35075086c.mp3",
+    "cover": "http://p1.music.126.net/6IeZ9MiSSDXifj74nzH6ww==/109951163561494000.jpg?param=130y130",
+    "img":"http://p1.music.126.net/6IeZ9MiSSDXifj74nzH6ww==/109951163561494000.jpg"
+  },
+  {
+    "name": "なごり雪",
+    "artist": "イルカ",
+    "url": "http://m10.music.126.net/20200520192203/0efe829a45914f44601944f5ef1af9cc/ymusic/bb20/9e7a/9a76/f61d9eeba4ca3caa03dc63b5917a4464.mp3",
+    "cover": "http://p1.music.126.net/_pWmfQ4klN5X_zWzpHneNw==/2306775395141095.jpg?param=130y130",
+    "img":"https://public.fuyoukache.com/Fm3eUT4W68-SR9dizVt4VRXIRWnG"
+  },
+  {
+    "name": "とんぼ",
+    "artist": "長渕剛",
+    "url": "https://music.163.com/song/media/outer/url?id=481890.mp3",
+    "cover": "http://p2.music.126.net/lwqgKpQknnPJSicKiSGYHw==/849922488271136.jpg?param=130y130",
+    "img":"https://public.fuyoukache.com/FsoDyLR8RwJpFmTQc6L6m32cHPiJ"
+  },
+  {
+    "name": "小星星",
+    "artist": "汪苏泷",
+    "url": "https://music.163.com/song/media/outer/url?id=165379.mp3",
+    "cover": "http://p1.music.126.net/OeffdGbmBdr_UaiKaCA_cA==/109951164190512006.jpg?param=130y130",
+    "img":"https://public.fuyoukache.com/Fp-Er3JyD2EkTS3srORQNz24Yeo1"
+  },
+  {
+    "name": "Let it out",
+    "artist": "福原美穂",
+    "url": "https://music.163.com/song/media/outer/url?id=571330.mp3",
+    "cover": "http://p2.music.126.net/uTDpIsYXmTif871tb0TvjQ==/832330302269550.jpg?param=130y130",
+    "img":"https://public.fuyoukache.com/Fg_SJ2ZgH3RrT9DHELV0RCF6eXgN"
+  }
+]

@@ -21,14 +21,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     overflow: auto;
     scroll-behavior: smooth;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-    &::before {
-      content:"";
-      display: table;
-      width: 0;
-      height: 0;
-      visibility: hidden;
-    }
+    font-family: -apple-system, BlinkMacSystemFont, Ubuntu, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif;
 }
 td, th, caption {
     font-size: 14px;

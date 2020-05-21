@@ -13,30 +13,34 @@ import About from 'routes/about'
 import Blog from 'routes/blog'
 import Article from 'routes/article'
 import Css from 'routes/cssPage'
+import Music from 'routes/music'
 import Calculator from './calculator'
 import hooksTest from './hooksTest'
 import ObjectFit from './demo/objectFIt'
-import Equip from './demo/Fee'
+import Equip from './demo/Equip'
+import Footer from '../components/Footer'
 
 const Routes = () => {
   return <HashRouter>
-  <div style={{width:"100%",height:"100%",overflow:"auto"}}>
+  <div style={{width:"100%"}}>
     <GlobalHeader />
     <BackTop />
     <Route exact path="/" render={() => <Redirect to="/home" />} />
     <ScrollToTop>
       <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/about" component={About} />
-          <Route path="/css" component={Css} />
-          <Route path="/article/:id" component={Article} />
-          <Route path="/calculator" component={Calculator} />
-          <Route path="/hookstest" component={hooksTest} />
-          <Route path="/demo/objectfit" component={ObjectFit} />
-          <Route path="/demo/equip" component={Equip} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/css" component={Css} />
+        <Route exact path="/article/:id" component={Article} />
+        <Route exact path="/music" component={Music} />
+        <Route exact path="/calculator" component={Calculator} />
+        <Route exact path="/hookstest" component={hooksTest} />
+        <Route exact path="/demo/objectfit" component={ObjectFit} />
+        <Route exact path="/demo/equip" component={Equip} />
       </Switch>
     </ScrollToTop>
+    <Footer />
   </div>
 </HashRouter>
 }

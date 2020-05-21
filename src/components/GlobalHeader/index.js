@@ -46,7 +46,7 @@ class GlobalHeader extends Component {
         </div>
         <ul className="header-catalogue">
           <li className="catalogue-item"><Link to="/" ><i className="iconfont iconhome"></i>Home</Link></li>
-          <li className="catalogue-item"><Link to="/blog" ><i className="iconfont iconsvgwrite"></i>Blog</Link></li>
+          <li className="catalogue-item"><Link to="/blog" id="testblog"><i className="iconfont iconsvgwrite"></i>Blog</Link></li>
           <li className="catalogue-item"><Link to="/css" ><i className="iconfont iconchuangyi"></i>Css</Link></li>
           <li className="catalogue-item"><Link to="/music"><i className="iconfont iconyinle"></i>Music</Link></li>
         </ul>
@@ -57,7 +57,7 @@ class GlobalHeader extends Component {
               <Link to="/" ><i className="iconfont iconhome" onClick={this.changeToggleList}></i></Link>
             </div>
             <div className='toggle-item'>
-              <Link to="/blog" ><i className="iconfont iconsvgwrite" onClick={this.changeToggleList}></i></Link>
+              <Link to="/blog"><i className="iconfont iconsvgwrite" onClick={this.changeToggleList}></i></Link>
             </div>
             <div className='toggle-item'>
               <Link to="/css" ><i className="iconfont iconchuangyi" onClick={this.changeToggleList}></i></Link>
