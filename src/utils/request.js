@@ -2,7 +2,7 @@
  * @Author: shilei 
  * @Date: 2020-05-14 13:45:53 
  * @Last Modified by: shilei
- * @Last Modified time: 2020-05-15 15:55:59
+ * @Last Modified time: 2020-05-22 16:27:52
  */
 
 import Qs from 'qs';
@@ -48,8 +48,9 @@ function checkStatus(response) {
  * @param  {object} [options] The options we want to pass to "fetch"
  * @return {object}           An object containing either "data" or "err"
  */
-export default async function request(url, options) {
-  url = 'http://blogapicenter.acglouvre.art' + url;
+export default async function request(url, options, host="http://blogapicenter.acglouvre.art") {
+  console.log(options)
+  url = host + url;
   const defaultOptions = {
     credentials: 'include',
   };

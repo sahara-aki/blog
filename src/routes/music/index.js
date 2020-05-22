@@ -2,7 +2,7 @@
  * @Author: shilei 
  * @Date: 2020-05-20 16:22:28 
  * @Last Modified by: shilei
- * @Last Modified time: 2020-05-21 17:14:21
+ * @Last Modified time: 2020-05-22 17:13:54
  * @Description: 音乐
  */
 
@@ -10,24 +10,34 @@
 import React, { Component } from 'react';
 import 'APlayer/dist/APlayer.min.css';
 import APlayer from 'APlayer';
-import { getFavoriteMusicList } from '../../api/music'
+import { getFavoriteMusicList, getMusicLyricById } from '../../api/music'
 import { result } from '../../utils/utils'
 import './index.less'
 
 class Music extends Component {
 
   state = {
-    musicList:[]
+    musicList:[],
+    musicLyric:""
   }
 
   componentDidMount(){
     this.getMusic();
   }
 
-  switchMusic = (index)=>{
+  switchMusic = async (index, id)=>{
     this.ap.list.switch(index);
     if(this.ap.audio.paused){
       this.ap.play();
+    }
+    const res = await getMusicLyricById({id});
+
+    if(res && res.lrc && res.code == 200){
+      this.setState({
+        musicLyric:res.lrc.lyric
+      })
+      console.log(this.ap)
+      this.ap.lrc.show()
     }
   }
 
@@ -39,13 +49,14 @@ class Music extends Component {
           musicList: res.data
         })
         const audio = res.data.map(item=>{
-          const { name, artist, url, cover } = item;
+          const { name, artist, url, cover, lrc } = item;
           return {
-            name, artist, url, cover
+            name, artist, url, cover, lrc
           }
         })
         const ap = new APlayer({
           container: document.getElementById('aplayer'),
+          lrcType: 1,
           fixed: true,
           audio
         })
@@ -70,13 +81,14 @@ class Music extends Component {
                   <div className="music-name">{item.name}</div>
                   <div className="music-author">{item.artist}</div>
                   <div className="music-line"></div>
-                  <div className="listen-button" onClick={()=>{this.switchMusic(index)}}>LISTEN</div>
+                  <div className="listen-button" onClick={()=>{this.switchMusic(index, item.id)}}>LISTEN</div>
                 </div>
               </div>
               })}
             </div>
           </div>
-          <div id="aplayer"></div>
+          <div id="aplayer">
+          </div>
         </div>
       );
   }
