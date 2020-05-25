@@ -14,6 +14,7 @@ import Blog from 'routes/blog'
 import Article from 'routes/article'
 import Css from 'routes/cssPage'
 import Music from 'routes/music'
+import Exception from 'routes/exception/404'
 import Calculator from './calculator'
 import hooksTest from './hooksTest'
 import ObjectFit from './demo/objectFIt'
@@ -38,6 +39,7 @@ const Routes = () => {
         <Route exact path="/hookstest" component={hooksTest} />
         <Route exact path="/demo/objectfit" component={ObjectFit} />
         <Route exact path="/demo/equip" component={Equip} />
+        <Route component={Exception} />
       </Switch>
     </ScrollToTop>
     <Footer />

@@ -10,14 +10,13 @@
     justify-content: center;
     align-items: center;
     h1 {
-      // color: #FFF;
       width: 500px;
       height: 160px;
       line-height: 160px;
       font-size: 80px;
+      letter-spacing: 26px;
       margin: 0 auto;
       text-align: center;
-      letter-spacing:16px;
       background:rgba(255,255,255,0.3);
       z-index: 1;
       overflow: hidden;
@@ -102,6 +101,32 @@
               color: rgb(255, 255, 255);
               background: rgb(53, 192, 192);
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .music-container {
+    .banner {
+      margin-top: 58px;
+      height: 200px;
+      h1 {
+        width: 200px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 26px;
+        letter-spacing: 16px;
+      }
+    }
+    .albums-container {
+      .albums {
+        grid-template-columns: repeat(2, 1fr);
+        .album-item{
+          .music-info{
+            transform: translateY(0);
           }
         }
       }

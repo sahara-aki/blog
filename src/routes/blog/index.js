@@ -61,7 +61,7 @@ class Blog extends Component {
     return (
       <div className="blog">
         <div className="banner">
-          <h1>B L O G</h1>
+          <h1>BLOG</h1>
         </div>
         <div className="content">
           <ul className="article">

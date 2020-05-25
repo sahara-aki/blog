@@ -2,7 +2,7 @@
  * @Author: shilei 
  * @Date: 2020-05-20 16:22:28 
  * @Last Modified by: shilei
- * @Last Modified time: 2020-05-22 17:13:54
+ * @Last Modified time: 2020-05-25 10:24:37
  * @Description: 音乐
  */
 
@@ -69,7 +69,7 @@ class Music extends Component {
       return (
         <div className="music-container">
           <div className="banner">
-            <h1>M U S I C</h1>
+            <h1>MUSIC</h1>
           </div>
           <div className="albums-container">
             <h3 className="title">Sahara Music</h3>
