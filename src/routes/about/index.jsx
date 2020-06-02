@@ -21,9 +21,9 @@ const About = () => (
       博客基于react+antd搭建,参考了许多大佬的博客风格,建议和批评都可以在下面github地址中blog项目提出issue, 期待共同学习, 共同进步~
     </div>
     <h2>联系方式</h2>
-    <div className="infomation">
-      <p>Email: whitevivian@foxmail.com</p>
-      <p>github:https://github.com/sahara-aki</p>
+    <div className="infomation contact">
+      <p><i className="iconfont iconyouxiang"></i>Email: whitevivian@foxmail.com</p>
+      <p><i className="iconfont icongithub"></i>github:<a href="https://github.com/sahara-aki" target="_blank">https://github.com/sahara-aki</a></p>
     </div>
   </div>
 )
