@@ -47,8 +47,8 @@ class GlobalHeader extends Component {
         <ul className="header-catalogue">
           <li className="catalogue-item"><Link to="/" ><i className="iconfont iconhome"></i>Home</Link></li>
           <li className="catalogue-item"><Link to="/blog" id="testblog"><i className="iconfont iconsvgwrite"></i>Blog</Link></li>
-          <li className="catalogue-item"><Link to="/css" ><i className="iconfont iconchuangyi"></i>Css</Link></li>
           <li className="catalogue-item"><Link to="/music"><i className="iconfont iconyinle"></i>Music</Link></li>
+          <li className="catalogue-item"><Link to="/about" ><i className="iconfont iconguanyu"></i>About</Link></li>
         </ul>
         <div className="nav-toggle">
           <div className="toggle-icon" onClick={this.changeToggleList}><a><i className="iconfont iconmulu"></i></a></div>
