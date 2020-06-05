@@ -8,7 +8,7 @@ const About = () => (
     </div>
     <h1>关于我</h1>
     <div className="description">
-      死は生の対極としてではなく、その一部として存在している。
+    「今でもあなたは私の光。」
     </div>
     <h2>
       个人简介

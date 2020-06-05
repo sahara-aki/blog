@@ -60,10 +60,10 @@ class GlobalHeader extends Component {
               <Link to="/blog"><i className="iconfont iconsvgwrite" onClick={this.changeToggleList}></i></Link>
             </div>
             <div className='toggle-item'>
-              <Link to="/css" ><i className="iconfont iconchuangyi" onClick={this.changeToggleList}></i></Link>
+              <Link to="/music" ><i className="iconfont iconyinle" onClick={this.changeToggleList}></i></Link>
             </div>
             <div className='toggle-item'>
-              <Link to="/music" ><i className="iconfont iconyinle" onClick={this.changeToggleList}></i></Link>
+              <Link to="/about" ><i className="iconfont iconguanyu" onClick={this.changeToggleList}></i></Link>
             </div>
           </div>
         </div>
